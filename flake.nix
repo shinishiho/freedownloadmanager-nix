@@ -49,6 +49,8 @@
           cp -r $tmp/opt/freedownloadmanager/* $out
           patchelf $out/plugins/sqldrivers/libqsqlmimer.so --remove-needed libmimerapi.so
           cp -r $tmp/usr/share $out
+          mkdir $out/bin
+          ln -sf $out/fdm $out/bin/freedownloadmanager
         '';
 
         meta = {
