@@ -51,6 +51,7 @@
           cp -r $tmp/usr/share $out
           mkdir $out/bin
           ln -sf $out/fdm $out/bin/freedownloadmanager
+          substituteInPlace $out/share/applications/freedownloadmanager.desktop --replace "Exec=/opt/freedownloadmanager/fdm" "Exec=freedownloadmanager" --replace "Icon=/opt/freedownloadmanager/icon.png" "Icon=$out/freedownloadmanager/icon.png"
         '';
 
         meta = {
