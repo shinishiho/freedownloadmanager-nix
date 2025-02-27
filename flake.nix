@@ -63,7 +63,6 @@
             licenses = lib.licenses.unfree;
             platforms = [ "x86_64-linux" ];
             homepage = "https://www.freedownloadmanager.org";
-            sourceProvenance = with sourceTypes; [ binaryNativeCode ];
             maintainers = [];
           };
         });
