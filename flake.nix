@@ -56,6 +56,7 @@
 
         meta = {
           description = "Free Download Manager";
+          licenses = lib.licenses.unfree;
           homepage = "https://www.freedownloadmanager.org";
         };
       });
