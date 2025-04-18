@@ -20,22 +20,9 @@
 
           nativeBuildInputs = [
             dpkg
-            libxkbcommon
-            libGL
             mysql80
-            xorg.libX11
-            xorg.libxcb
-            egl-wayland
-            libmysqlclient
             gst_all_1.gst-devtools
-            gtk3
-            libpq
-            xorg.xcbutil
-            xcb-util-cursor
             libpulseaudio
-            unixODBC
-            cairo
-            pango
             autoPatchelfHook
             kdePackages.wrapQtAppsHook
             qt6.qtbase
@@ -55,7 +42,7 @@
             ln -sf $out/fdm $out/bin/freedownloadmanager
             substituteInPlace $out/share/applications/freedownloadmanager.desktop\
               --replace "Exec=/opt/freedownloadmanager/fdm" "Exec=freedownloadmanager"\
-              --replace "Icon=/opt/freedownloadmanager/icon.png" "Icon=$out/freedownloadmanager/icon.png"
+              --replace "Icon=/opt/freedownloadmanager/icon.png" "Icon=$out/icon.png"
           '';
 
           meta = {
