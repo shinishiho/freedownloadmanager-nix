@@ -15,18 +15,18 @@
           src = builtins.fetchurl {
             url =
               "https://files2.freedownloadmanager.org/6/latest/freedownloadmanager.deb";
-            sha256 = "1ypkcpl0lkixbgbf68081njfavys2mi6sndmvsvxbff7a7g15a8v";
+            sha256 = "1gdlc3ln4sv47jj4jq0xaqjrrskpl1hcwmrrn6d4p18lxs00wf2i";
           };
 
           nativeBuildInputs = [
             dpkg
             mysql80
-            gst_all_1.gst-devtools
-            libpulseaudio
-            autoPatchelfHook
-            kdePackages.wrapQtAppsHook
             qt6.qtbase
             wrapGAppsHook
+            libpulseaudio
+            autoPatchelfHook
+            gst_all_1.gst-devtools
+            kdePackages.wrapQtAppsHook
           ];
 
           runtimeDependencies = [ (lib.getLib udev) ];
