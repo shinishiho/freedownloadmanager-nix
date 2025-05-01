@@ -2,9 +2,13 @@
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
     flake-utils.url = "github:numtide/flake-utils";
+    src = {
+      url = "https://files2.freedownloadmanager.org/6/latest/freedownloadmanager.deb";
+      flake = false;
+    };
   };
 
-  outputs = { nixpkgs, flake-utils, ... }:
+  outputs = { src, nixpkgs, flake-utils, ... }:
     #TODO: Add support for more systems.
     flake-utils.lib.eachSystem (["x86_64-linux"]) (system:
       with import nixpkgs { inherit system; }; {
@@ -12,11 +16,10 @@
           pname = "freedownloadmanager";
           version = "6.25.2";
 
-          src = builtins.fetchurl {
-            url =
-              "https://files2.freedownloadmanager.org/6/latest/freedownloadmanager.deb";
-          };
+          inherit src;
 
+          dontUnpack = true;
+          
           nativeBuildInputs = [
             dpkg
             mysql80
