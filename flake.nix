@@ -15,7 +15,6 @@
           src = builtins.fetchurl {
             url =
               "https://files2.freedownloadmanager.org/6/latest/freedownloadmanager.deb";
-            sha256 = "1gdlc3ln4sv47jj4jq0xaqjrrskpl1hcwmrrn6d4p18lxs00wf2i";
           };
 
           nativeBuildInputs = [
