@@ -8,10 +8,17 @@
     };
   };
 
-  outputs = { src, nixpkgs, flake-utils, ... }:
+  outputs =
+    {
+      src,
+      nixpkgs,
+      flake-utils,
+      self,
+      ...
+    }:
     #TODO: Add support for more systems.
-    flake-utils.lib.eachSystem (["x86_64-linux"]) (system:
-      with import nixpkgs { inherit system; }; {
+    flake-utils.lib.eachSystem [ "x86_64-linux" ] (
+      system: with import nixpkgs { inherit system; }; {
         packages.default = stdenv.mkDerivation (finalAttrs: {
           pname = "freedownloadmanager";
           version = "6.25.2";
@@ -19,7 +26,7 @@
           inherit src;
 
           dontUnpack = true;
-          
+
           nativeBuildInputs = [
             dpkg
             mysql80
@@ -52,9 +59,17 @@
             licenses = lib.licenses.unfree;
             platforms = [ "x86_64-linux" ];
             homepage = "https://www.freedownloadmanager.org";
-            maintainers = [];
+            maintainers = [ ];
           };
         });
-        formatter = nixfmt-classic;
-      });
+        formatter = nixfmt-tree;
+      }
+    )
+    // {
+      overlay = [
+        (_: old: {
+          free-download-manager = self.packages.${old.system}.default;
+        })
+      ];
+    };
 }

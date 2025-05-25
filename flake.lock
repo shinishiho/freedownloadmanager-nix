@@ -20,11 +20,11 @@
     },
     "nixpkgs": {
       "locked": {
-        "lastModified": 1745930157,
-        "narHash": "sha256-y3h3NLnzRSiUkYpnfvnS669zWZLoqqI6NprtLQ+5dck=",
+        "lastModified": 1748026106,
+        "narHash": "sha256-6m1Y3/4pVw1RWTsrkAK2VMYSzG4MMIj7sqUy7o8th1o=",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "46e634be05ce9dc6d4db8e664515ba10b78151ae",
+        "rev": "063f43f2dbdef86376cc29ad646c45c46e93234c",
         "type": "github"
       },
       "original": {
@@ -44,7 +44,7 @@
     "src": {
       "flake": false,
       "locked": {
-        "narHash": "sha256-XG+8tqXMVWWTz5KkJVsc7Cro/duzQu/XejKhIihKt60=",
+        "narHash": "sha256-HMvrt5JAM+IuxpR929MpdR0eq6YeoseyIwtVg6WSKDg=",
         "type": "file",
         "url": "https://files2.freedownloadmanager.org/6/latest/freedownloadmanager.deb"
       },
