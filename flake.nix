@@ -66,10 +66,10 @@
       }
     )
     // {
-      overlay = [
-        (_: old: {
+      overlay = (
+        _: old: {
           free-download-manager = self.packages.${old.system}.default;
-        })
-      ];
+        }
+      );
     };
 }
