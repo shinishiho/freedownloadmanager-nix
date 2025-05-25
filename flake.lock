@@ -1,5 +1,32 @@
 {
   "nodes": {
+    "darwin-src": {
+      "flake": false,
+      "locked": {
+        "narHash": "sha256-I1rb53M08ImqfBjq+QEp7XpqXE4ejtai6POVZyhdP1g=",
+        "type": "file",
+        "url": "https://files2.freedownloadmanager.org/6/latest/fdm.dmg"
+      },
+      "original": {
+        "type": "file",
+        "url": "https://files2.freedownloadmanager.org/6/latest/fdm.dmg"
+      }
+    },
+    "dmg-control": {
+      "locked": {
+        "lastModified": 1748098817,
+        "narHash": "sha256-PFn0WEeIsjiFKrSJfkR1F9/ItVEs1nlrw1KwEexF+/0=",
+        "owner": "InvraNet",
+        "repo": "dmg-control-nix",
+        "rev": "60606f54d3bc4ab2c909f0863df7bceb64a537a4",
+        "type": "gitlab"
+      },
+      "original": {
+        "owner": "InvraNet",
+        "repo": "dmg-control-nix",
+        "type": "gitlab"
+      }
+    },
     "flake-utils": {
       "inputs": {
         "systems": "systems"
@@ -16,6 +43,18 @@
         "owner": "numtide",
         "repo": "flake-utils",
         "type": "github"
+      }
+    },
+    "linux-src": {
+      "flake": false,
+      "locked": {
+        "narHash": "sha256-HMvrt5JAM+IuxpR929MpdR0eq6YeoseyIwtVg6WSKDg=",
+        "type": "file",
+        "url": "https://files2.freedownloadmanager.org/6/latest/freedownloadmanager.deb"
+      },
+      "original": {
+        "type": "file",
+        "url": "https://files2.freedownloadmanager.org/6/latest/freedownloadmanager.deb"
       }
     },
     "nixpkgs": {
@@ -36,21 +75,11 @@
     },
     "root": {
       "inputs": {
+        "darwin-src": "darwin-src",
+        "dmg-control": "dmg-control",
         "flake-utils": "flake-utils",
-        "nixpkgs": "nixpkgs",
-        "src": "src"
-      }
-    },
-    "src": {
-      "flake": false,
-      "locked": {
-        "narHash": "sha256-HMvrt5JAM+IuxpR929MpdR0eq6YeoseyIwtVg6WSKDg=",
-        "type": "file",
-        "url": "https://files2.freedownloadmanager.org/6/latest/freedownloadmanager.deb"
-      },
-      "original": {
-        "type": "file",
-        "url": "https://files2.freedownloadmanager.org/6/latest/freedownloadmanager.deb"
+        "linux-src": "linux-src",
+        "nixpkgs": "nixpkgs"
       }
     },
     "systems": {
