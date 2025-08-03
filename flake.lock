@@ -3,7 +3,7 @@
     "darwin-src": {
       "flake": false,
       "locked": {
-        "narHash": "sha256-aAbmHXIKLQFk7oeOd9nsyvXLvclPQP/Y3YbWz/N94Nc=",
+        "narHash": "sha256-dtG9Xj+yZwFzpyF4v7amh7O4z3b3WJPTxUH2LJjavyE=",
         "type": "file",
         "url": "https://files2.freedownloadmanager.org/6/latest/fdm.dmg"
       },
@@ -48,7 +48,7 @@
     "linux-src": {
       "flake": false,
       "locked": {
-        "narHash": "sha256-TFzu29b0dxNjRTFcJwRTENVNDSLNNIpdo+io3qOj4zU=",
+        "narHash": "sha256-2EQlLRJTTdMKaVj0yY7a1qOrOheeUOeyHs1eKKsi08U=",
         "type": "file",
         "url": "https://files2.freedownloadmanager.org/6/latest/freedownloadmanager.deb"
       },
@@ -59,11 +59,11 @@
     },
     "nixpkgs": {
       "locked": {
-        "lastModified": 1753250450,
-        "narHash": "sha256-i+CQV2rPmP8wHxj0aq4siYyohHwVlsh40kV89f3nw1s=",
+        "lastModified": 1753939845,
+        "narHash": "sha256-K2ViRJfdVGE8tpJejs8Qpvvejks1+A4GQej/lBk5y7I=",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "fc02ee70efb805d3b2865908a13ddd4474557ecf",
+        "rev": "94def634a20494ee057c76998843c015909d6311",
         "type": "github"
       },
       "original": {
