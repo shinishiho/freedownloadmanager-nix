@@ -20,6 +20,7 @@ stdenv.mkDerivation (finalAttrs: {
     autoPatchelfHook
     gst_all_1.gst-devtools
     kdePackages.wrapQtAppsHook
+    pipewire
   ];
 
   runtimeDependencies = [ (lib.getLib udev) ];
