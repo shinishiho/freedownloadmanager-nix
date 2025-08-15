@@ -16,13 +16,13 @@
       "locked": {
         "lastModified": 1748098817,
         "narHash": "sha256-PFn0WEeIsjiFKrSJfkR1F9/ItVEs1nlrw1KwEexF+/0=",
-        "owner": "InvraNet",
+        "owner": "invra",
         "repo": "dmg-control-nix",
         "rev": "60606f54d3bc4ab2c909f0863df7bceb64a537a4",
         "type": "gitlab"
       },
       "original": {
-        "owner": "InvraNet",
+        "owner": "invra",
         "repo": "dmg-control-nix",
         "type": "gitlab"
       }
