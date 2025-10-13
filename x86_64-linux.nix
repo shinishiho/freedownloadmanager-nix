@@ -23,7 +23,13 @@ stdenv.mkDerivation (finalAttrs: {
     pipewire
   ];
 
-  runtimeDependencies = [ (lib.getLib udev) ];
+  runtimeDependencies = lib.makeLibraryPath [
+    udev
+    rustls-libssl
+    openssl_3
+    pipewire
+    pulseaudio
+  ];
 
   installPhase = ''
     export tmp=$(mktemp -d)
