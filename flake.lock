@@ -48,7 +48,7 @@
     "linux-src": {
       "flake": false,
       "locked": {
-        "narHash": "sha256-f4YLid0qB5kgPA6NXGqr/wf5k6Gupzb3QYFZMJFOz5w=",
+        "narHash": "sha256-IB4BoJ7wFPez21eRk7n/9BMXTm/3EptSljhQNLCGsuc=",
         "type": "file",
         "url": "https://files2.freedownloadmanager.org/6/latest/freedownloadmanager.deb"
       },
